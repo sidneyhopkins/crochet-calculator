@@ -10,18 +10,19 @@ const multYes = document.getElementById('mult-yes'); // always true
 
 // this is how we figure out how many chains we need
 const totalChains = () => {
-    const total = chains.value * blanket.value / 5;
-    console.log(total);
-    if (multYes.value === true) {
-        const newTotal = Math.ceil(total/chainMultNum.value);
+    const total = chains.value * blanket.value / 5; 
+    
+    if (multYes.value) {
+        const newTotal = (Math.ceil(total/chainMultNum.value)*chainMultNum.value);
         console.log(newTotal);
         return newTotal;
-    } else {
-        return total;
+    } else if (multNo.value) {
+        return Math.ceil(total); //make new const
+        console.log(total);
     }
 }
 
-// event handler
+// event handler, fix innerHTML
 function handleClick() {
     totalChains();
     return document.getElementById('result').innerHTML = (`You need ${blanket.value} chains.`);
