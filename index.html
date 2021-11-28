@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Crochet Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="intro">
+        <h2>Crochet Chain Length Calculator</h2>
+        
+        <h3>Find out how many chains you need for your crochet blanket</h3>
+        
+        <ol>
+            <li>Create a 5" x 5" swatch of your pattern.<br />
+            - If your pattern is longer than 5", that's okay.<br/>
+            - Finish 1 full pattern and keep going with the swatch.<br />
+            - Be sure tension is exactly how you want it.<br />
+            <br/></li>
+            <li>Measure the number of stitches in 5" of your pattern.</li>
+        </ol>
+
+        </p>
+    </div>
+
+    <div id="calculator"> <!-- The calculator container -->
+
+        <!-- Input for number of chains in a swatch -->
+      <label for="chains">Chains in 5" swatch:</label>
+      <input type="number" min="1" id="chains" name="chains" required />
+      <br />
+
+      <!-- Input for width of crochet project -->
+      <label for="blanket">Choose a blanket size for your project:</label>
+      <select name="blanket" id="blanket" required>
+        <option value="" selected disabled hidden>choose size</option>
+        <option value="52">small throw - 52" x 60"</option>
+        <option value="60">large throw - 60" x 72"</option>
+        <option value="66">twin - 66" x 90"</option>
+        <option value="80">full - 80" x 90"</option>
+        <option value="90">queen - 90" x 90"</option>
+        <option value="90">king - 90" x 108"</option>
+        <option value="98">CA king - 98" x 110"</option>
+      </select>
+      <span>(format is W x H)</span>
+      <br />
+
+      <!-- Chain multiples for crochet project -->
+      <span>Is there a chain multiple for your pattern?</span>
+      <label for='mult-yes'>Yes</label>
+      <input type='radio' value='true' name='chainMult' id='mult-yes'></input>
+      <select name='chainMultNum' id='chainMultNum'>
+        <option value="1" selected disabled>multiple</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12'>12</option>
+      </select>
+      <label for="no">No</label>
+      <input type="radio" id="no" name="chainMult" value="false" />
+      <br />
+
+      <!-- Submit Button -->
+      <button type="submit" id='submit'>Calculate My Chains</button>
+    </div>
+
+    <!-- The results-->
+    <div id="results">
+      <h2>Number of Chains</h2>
+      <p id="result"></p>
+    </div>
+
+    <script src="./app.js" async defer></script>
+  </body>
+</html>
