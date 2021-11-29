@@ -2,10 +2,122 @@
   font-family: "Outfit", sans-serif;
 }
 
-#calculator {
-  background-color: bisque;
+body {
+  display: block;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+/* experiment */
+/* @keyframes example {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: coral;
+  }
+  75% {
+    background-color: darkgoldenrod;
+  }
+  100% {
+    background-color: cornflowerblue;
+  }
+} */
+
+div {
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: x-large;
+  font-weight: 800;
+  text-align: center;
+}
+
+h2 {
+  font-size: large;
 }
 
 .intro {
-  background-color: cadetblue;
+  background-color: rgba(97, 164, 167, 0.75);
+  width: 80%;
+  max-width: 500px;
+  padding: 3%;
+}
+
+.calculator {
+  background-color: rgba(255, 228, 196, 0.75);
+  width: 80%;
+  padding: 3%;
+  max-width: 500px;
+}
+
+.answer {
+  background-color: rgba(245, 229, 155, 0.75);
+  width: 80%;
+  max-width: 500px;
+  padding: 3%;
+  font-size: x-large;
+  text-align: center;
+  display: block;
+}
+
+#result {
+  font-weight: 600;
+}
+
+.calcbutton {
+  font-weight: 600;
+  padding: 10px;
+  background-color: white;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+
+.calcbutton:hover {
+  background-color: rgba(145, 228, 255, 0.719);
+  border: solid 2px black;
+  padding: 9px 10px;
+}
+
+.div1 {
+  width: 100%;
+  text-align: center;
+  padding: 3% 0;
+  border-bottom: solid black thin;
+}
+
+.div2 {
+  text-align: center;
+  padding: 3% 0;
+  border-bottom: solid black thin;
+}
+
+.div3 {
+  text-align: center;
+  padding: 3% 0;
+  border-bottom: solid black thin;
+}
+
+.div4 {
+  text-align: center;
+  padding: 4% 0 0 0;
+}
+
+.cat {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.div5 {
+  width: 90%;
+}
+
+.tool {
+  font-size: small;
 }

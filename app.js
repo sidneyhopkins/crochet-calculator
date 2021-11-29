@@ -1,36 +1,26 @@
-//onSubmit => 
-// numChains*projectWidth/5" = totalChains
-//if multiple =>
-// Math.ceil(totalChains/multiple) = ( Math.ceil(19.2) => "20" ) 
+// 1. Add event listener on the submit button
+// 2. Add an event handler that saves a value, finds the div we want, and inserts a result
+// 3. Create a func that calculates the total chains needed
 
+// Objects that store info from the input fields we want
 const chains = document.getElementById('chains');
-const blanket = document.getElementById('blanket');
-const chainMultNum = document.getElementById('chainMultNum');
-const multYes = document.getElementById('mult-yes'); // always true
+const width = document.getElementById('width');
+const chainMult = document.getElementById('chainMult');
 
 // this is how we figure out how many chains we need
 const totalChains = () => {
-    const total = chains.value * blanket.value / 5; 
-    
-    if (multYes.value) {
-        const newTotal = (Math.ceil(total/chainMultNum.value)*chainMultNum.value);
-        console.log(newTotal);
-        return newTotal;
-    } else if (multNo.value) {
-        return Math.ceil(total); //make new const
-        console.log(total);
-    }
+    const total = chains.value * width.value / 5; // crude num of chains needed
+    const mult = chainMult.value;
+    const newTotal = Math.ceil(total/mult) * mult; // exact chains needed
+    return newTotal;
 }
 
-// event handler, fix innerHTML
+// event handler
 function handleClick() {
-    totalChains();
-    return document.getElementById('result').innerHTML = (`You need ${blanket.value} chains.`);
+    const x = totalChains();
+    document.getElementById('result').innerHTML = `You need ${x} chains.`;
 }
 
+// event listener
 document.getElementById('submit').addEventListener('click', handleClick);
-
-
-
-
 
