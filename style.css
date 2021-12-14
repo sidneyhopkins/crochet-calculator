@@ -1,123 +1,244 @@
 * {
-  font-family: "Outfit", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  margin: 0 auto;
 }
 
 body {
-  display: block;
-  animation-name: example;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  background-color: black;
+  color: white;
 }
-/* experiment */
-/* @keyframes example {
+
+header {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+
+header h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+header h2 {
+  font-size: 1em;
+}
+
+/* Intro and Calculator */
+
+.row1 {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.col1 h3 {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.col1 div {
+  padding: 10px 10px 10px 0;
+  justify-content: space-around;
+  max-width: 430px;
+}
+
+.col2 {
+  width: 50%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: solid white 2px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 15px auto;
+}
+
+.box div {
+  padding: 15px 20px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+input,
+select {
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button {
+  font-weight: 600;
+  padding: 18px 30px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+@keyframes colorback {
   0% {
-    background-color: red;
-  }
-  25% {
-    background-color: yellow;
+    background-color: rgb(221, 138, 83);
   }
   50% {
-    background-color: coral;
-  }
-  75% {
-    background-color: darkgoldenrod;
+    background-color: rgb(151, 98, 161);
   }
   100% {
-    background-color: cornflowerblue;
+    background-color: rgb(76, 168, 180);
   }
-} */
-
-div {
-  margin: 0 auto;
-  border-radius: 10px;
 }
 
-h1 {
-  font-size: x-large;
-  font-weight: 800;
-  text-align: center;
+button:hover {
+  animation-name: colorback;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
-h2 {
-  font-size: large;
-}
+/* Output */
 
-.intro {
-  background-color: rgba(97, 164, 167, 0.75);
-  width: 80%;
-  max-width: 500px;
-  padding: 3%;
-}
-
-.calculator {
-  background-color: rgba(255, 228, 196, 0.75);
-  width: 80%;
-  padding: 3%;
-  max-width: 500px;
-}
-
-.answer {
-  background-color: rgba(245, 229, 155, 0.75);
-  width: 80%;
-  max-width: 500px;
-  padding: 3%;
-  font-size: x-large;
-  text-align: center;
+.row2 {
+  width: 100%;
   display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: transparent;
+
+  animation-name: colorback;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 #result {
+  font-size: 1.4em;
   font-weight: 600;
+  padding: 30px 0;
+  background: transparent;
+  z-index: 1;
 }
 
-.calcbutton {
-  font-weight: 600;
-  padding: 10px;
-  background-color: white;
-  border: solid 1px gray;
-  border-radius: 5px;
-}
-
-.calcbutton:hover {
-  background-color: rgba(145, 228, 255, 0.719);
-  border: solid 2px black;
-  padding: 9px 10px;
-}
-
-.div1 {
-  width: 100%;
-  text-align: center;
-  padding: 3% 0;
-  border-bottom: solid black thin;
-}
-
-.div2 {
-  text-align: center;
-  padding: 3% 0;
-  border-bottom: solid black thin;
-}
-
-.div3 {
-  text-align: center;
-  padding: 3% 0;
-  border-bottom: solid black thin;
-}
-
-.div4 {
-  text-align: center;
-  padding: 4% 0 0 0;
-}
-
-.cat {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.div5 {
+img {
   width: 90%;
+  max-width: 600px;
+  margin: -90px 0 -40px;
+  background: transparent;
+  z-index: 0;
 }
 
-.tool {
-  font-size: small;
+footer div {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 15px auto;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes colorize {
+  0% {
+    color: rgb(221, 138, 83);
+  }
+  50% {
+    color: rgb(151, 98, 161);
+  }
+  100% {
+    color: rgb(76, 168, 180);
+  }
+}
+
+.info:hover {
+  cursor: pointer;
+  animation-name: colorize;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+#pop-div {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#popup {
+  background-color: rgba(143, 143, 143);
+  color: white;
+  width: 210px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: -42px;
+  left: -170px;
+}
+
+#popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(143, 143, 143) transparent transparent transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 10px 0 25px;
+  }
+
+  .row1 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .col1 {
+    width: 100%;
+    max-width: 500px;
+    border-bottom: solid white 1px;
+    border-top: solid white 1px;
+    padding: 20px 0;
+  }
+
+  .col2 {
+    margin: 28px 0;
+    width: 100%;
+  }
+
+  #result {
+    font-size: 1.2em;
+  }
+
+  footer div {
+    flex-direction: column;
+  }
 }

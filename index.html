@@ -4,99 +4,133 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Crochet Calculator</title>
-    <meta name="description" content="" />
+    <meta name="description" content="crochet calculator" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Raleway|Playfair+Display|Mohave"
       rel="stylesheet"
     />
-    <link rel='images' href='./images/cat.png' />
   </head>
   <body>
-    <div class="intro">
-        <h1>Crochet Chain Length Calculator</h1>
-        
-        <h2>Find out how many chains you need for your crochet blanket</h2>
-        
-        <ol>
-            <li>Create a 5" x 5" swatch of your pattern.</li>
-            <p class='tool'>If your pattern is longer than 5", that's okay. Finish 1 full pattern and keep going with the swatch. Be sure tension is exactly how you want it.<br />
-              </p>
-            <li>Measure the number of stitches in 5" of your pattern.</li>
-        </ol>
-
-        </p>
-    
+    <header>
+      <h1>Crochet Chain Length Calculator</h1>
+      <h2>Calculate how many chains you need for your crochet blanket</h2>
+    </header>
+    <div class="row1">
+      <div class="col1">
+        <div>
+          <h3>Instructions</h3>
+        </div>
+        <div>
+          <ol>
+            <li>
+              <strong>Create a 5" x 5" swatch</strong> of your pattern. Finish 1
+              full iteration of your pattern, even if it goes longer than 5". Be
+              sure tension is exactly how you want it.
+            </li>
+            <br />
+            <li>
+              <strong>Measure</strong> the number of stitches in 5" of your
+              pattern.
+            </li>
+          </ol>
+        </div>
       </div>
-      <div class="calculator"> <!-- The calculator container -->
-
-        <div class='div1'>
+      <div class="col2">
+        <div class="box">
+          <div class="div1">
             <!-- Input for number of chains in a swatch -->
-          <label for="chains">Chains in 5" swatch:</label>
-          <input type="number" min="1" max='100' id="chains" name="chains" required />
-        </div>
+            <label for="chains">Chains in 5" swatch:</label>
+            <input
+              type="number"
+              min="1"
+              max="100"
+              id="chains"
+              name="chains"
+              required
+            />
+          </div>
 
+          <div class="div2">
+            <!-- Input for width of crochet project -->
+            <label for="width">Project Size:</label>
+            <select name="blanket" id="width" required>
+              <option value="" selected disabled hidden>choose size</option>
+              <option value="52">small throw - 52" x 60"</option>
+              <option value="60">large throw - 60" x 72"</option>
+              <option value="66">twin - 66" x 90"</option>
+              <option value="80">full - 80" x 90"</option>
+              <option value="90">queen - 90" x 90"</option>
+              <option value="90">king - 90" x 108"</option>
+              <option value="98">CA king - 98" x 110"</option>
+            </select>
+            <br />
+            <span class="tool">(format is W x H)</span>
+          </div>
 
-        <div class='div2'>
-                  <!-- Input for width of crochet project -->
-          <label for="width">Project Size:</label>
-          <select name="blanket" id="width" required>
-            <option value="" selected disabled hidden>choose size</option>
-            <option value="52">small throw - 52" x 60"</option>
-            <option value="60">large throw - 60" x 72"</option>
-            <option value="66">twin - 66" x 90"</option>
-            <option value="80">full - 80" x 90"</option>
-            <option value="90">queen - 90" x 90"</option>
-            <option value="90">king - 90" x 108"</option>
-            <option value="98">CA king - 98" x 110"</option>
-          </select>
-          <span class='tool'>(format is W x H)</span>
-        </div>
+          <!-- Chain multiples for crochet project -->
+          <div class="div3">
+            <label for="chainMult">Chain Multiple</label>
+            <select name="chainMult" id="chainMult">
+              <option value="1" selected disabled hidden>No</option>
+              <option value="1">No</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
 
-        <!-- Chain multiples for crochet project -->
-
-
-        <div class='div3'>
-
-          <label for='chainMult'>Chain Multiple</label>
-          <select name='chainMult' id='chainMult'>
-            <option value='1' selected disabled hidden>No</option>
-            <option value='1'>No</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5'>5</option>
-            <option value='6'>6</option>
-            <option value='7'>7</option>
-            <option value='8'>8</option>
-            <option value='9'>9</option>
-            <option value='10'>10</option>
-            <option value='11'>11</option>
-            <option value='12'>12</option>
-          </select>
-
-        </div>
-
-        <div class='div4'>
-
-          <!-- Submit Button -->
-          <button class='calcbutton' type="submit" id='submit'>Calculate My Chains</button>
-
+          <div class="button">
+            <button type="submit" id="submit">Calculate My Chains</button>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- The results-->
-      <div class='answer' id="result">
-        <span class='placeholder'>Number of Chains</span>
+    <!-- The results-->
+    <div class="row2">
+      <div id="result">
+        <span class="placeholder"
+          ><span class="material-icons"> label_important </span></span
+        >...
       </div>
+      <img src="./images/cat.png" alt="cat with yarn" />
+    </div>
 
-      <div class='div5'>
-        <img class='cat' src='./images/cat.png' alt='cat with yarn'/>
+    <footer>
+      <div>
+        <div>
+          <a class="info" name="github" href="https://github.com/sidneyhopkins">
+            <span class="material-icons"> palette </span>
+            <span>Sidney Hopkins</span>
+          </a>
+
+          <a
+            class="info"
+            type="text"
+            id="copy-email"
+            value="sidhopkins14@gmail.com"
+          >
+            <span class="material-icons"> email </span>
+            <span>copy email address</span>
+            <div id="pop-div">
+              <span id="popup">Sidney's email copied to clipboard</span>
+            </div>
+          </a>
+        </div>
       </div>
-
+    </footer>
 
     <script src="./app.js" async defer></script>
   </body>

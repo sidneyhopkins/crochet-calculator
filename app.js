@@ -24,3 +24,24 @@ function handleClick() {
 // event listener
 document.getElementById('submit').addEventListener('click', handleClick);
 
+
+
+// -- click-to-copy email feature --
+
+const email = 'sidhopkins14@gmail.com';
+const popUp = document.getElementById('pop-div');
+
+// event handler
+const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    popUp.style.display = 'inline';
+    const countDown = () => {
+        setInterval(() => { popUp.style.display = 'none'; }, 5000);
+    }
+    countDown();
+}
+
+// event listener
+document.getElementById('copy-email').addEventListener('click', handleCopy);
+
+
