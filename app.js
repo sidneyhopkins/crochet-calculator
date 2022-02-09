@@ -1,13 +1,12 @@
-// 1. Add event listener on the submit button
-// 2. Add an event handler that saves a value, finds the div we want, and inserts a result
-// 3. Create a func that calculates the total chains needed
+// Variables that point to the input fields we want
 
-// Objects that store info from the input fields we want
 const chains = document.getElementById('chains');
 const width = document.getElementById('width');
 const chainMult = document.getElementById('chainMult');
 
-// this is how we figure out how many chains we need
+
+// How many chains do we need?
+
 const totalChains = () => {
     const total = chains.value * width.value / 5; // crude num of chains needed
     const mult = chainMult.value;
@@ -43,5 +42,3 @@ const handleCopy = () => {
 
 // event listener
 document.getElementById('copy-email').addEventListener('click', handleCopy);
-
-

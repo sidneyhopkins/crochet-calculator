@@ -15,35 +15,31 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Crochet Chain Length Calculator</h1>
-      <h2>Calculate how many chains you need for your crochet blanket</h2>
-    </header>
     <div class="row1">
       <div class="col1">
+        <div class="box1">
         <div>
-          <h3>Instructions</h3>
+          <h1>Crochet Chain Length Calculator</h1>
         </div>
         <div>
-          <ol>
-            <li>
-              <strong>Create a 5" x 5" swatch</strong> of your pattern. Finish 1
+          <ul>
+            <li>Create a 5" x 5" swatch of your pattern.</li>
+            <br/>
+            <li>Finish 1
               full iteration of your pattern, even if it goes longer than 5". Be
-              sure tension is exactly how you want it.
-            </li>
+              sure tension is exactly how you want it.</li>
             <br />
-            <li>
-              <strong>Measure</strong> the number of stitches in 5" of your
-              pattern.
-            </li>
-          </ol>
+            <li>Measure the number of stitches in your 5" swatch.</li>
+          </ul>
+        </div>
         </div>
       </div>
       <div class="col2">
-        <div class="box">
+        <div class="box2">
+          
+         <!-- Input for number of chains in a swatch -->
           <div class="div1">
-            <!-- Input for number of chains in a swatch -->
-            <label for="chains">Chains in 5" swatch:</label>
+            <label for="chains">Stitches in 5" swatch:</label>
             <input
               type="number"
               min="1"
@@ -54,11 +50,10 @@
             />
           </div>
 
+         <!-- Input for width of crochet project -->
           <div class="div2">
-            <!-- Input for width of crochet project -->
-            <label for="width">Project Size:</label>
             <select name="blanket" id="width" required>
-              <option value="" selected disabled hidden>choose size</option>
+              <option value="" selected disabled hidden>Project Size</option>
               <option value="52">small throw - 52" x 60"</option>
               <option value="60">large throw - 60" x 72"</option>
               <option value="66">twin - 66" x 90"</option>
@@ -68,12 +63,12 @@
               <option value="98">CA king - 98" x 110"</option>
             </select>
             <br />
-            <span class="tool">(format is W x H)</span>
+            <span class="tool">(w x h)</span>
           </div>
 
           <!-- Chain multiples for crochet project -->
           <div class="div3">
-            <label for="chainMult">Chain Multiple</label>
+            <label for="chainMult">Chain Multiple: </label>
             <select name="chainMult" id="chainMult">
               <option value="1" selected disabled hidden>No</option>
               <option value="1">No</option>
@@ -101,13 +96,9 @@
     <!-- The results-->
     <div class="row2">
       <div id="result">
-        <span class="placeholder"
-          ><span class="material-icons"> label_important </span></span
-        >...
+        <span class="placeholder">...</span>
       </div>
-      <img src="./images/cat.png" alt="cat with yarn" />
     </div>
-
     <footer>
       <div>
         <div>
@@ -123,7 +114,7 @@
             value="sidhopkins14@gmail.com"
           >
             <span class="material-icons"> email </span>
-            <span>copy email address</span>
+            <span>click to copy</span>
             <div id="pop-div">
               <span id="popup">Sidney's email copied to clipboard</span>
             </div>
@@ -131,7 +122,6 @@
         </div>
       </div>
     </footer>
-
     <script src="./app.js" async defer></script>
   </body>
 </html>

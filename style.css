@@ -6,24 +6,8 @@
 }
 
 body {
-  background-color: black;
-  color: white;
-}
-
-header {
-  width: 100%;
-  text-align: center;
-  margin: 5px 0;
-}
-
-header h1 {
-  font-size: 1.5em;
-  font-weight: 700;
-  padding: 5px 0;
-}
-
-header h2 {
-  font-size: 1em;
+  background-color: white;
+  color: black;
 }
 
 /* Intro and Calculator */
@@ -33,82 +17,94 @@ header h2 {
   width: 100%;
   max-width: 1000px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .col1 {
   width: 50%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
 }
 
-.col1 h3 {
-  font-weight: 700;
-  font-size: 1.2em;
+.box1 {
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid gray 2px;
+  box-shadow: 7px 7px 3px 0 thistle;
 }
 
 .col1 div {
-  padding: 10px 10px 10px 0;
-  justify-content: space-around;
-  max-width: 430px;
+  padding: 10px;
 }
 
 .col2 {
   width: 50%;
-}
-
-.box {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  margin: 0 0 10px 0;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: solid white 2px;
-  border-radius: 10px;
+  border: solid gray 2px;
+  box-shadow: 7px 7px 3px 0 lightsteelblue;
   width: fit-content;
   margin: 15px auto;
 }
 
-.box div {
+.box2 div {
   padding: 15px 20px;
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
 }
 
 input,
 select {
-  background-color: rgb(255, 255, 255);
-  border-radius: 25px;
-  text-align: center;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
   font-size: 1em;
   cursor: pointer;
+  border: solid 1px gray;
+  padding: 2px 0;
+  outline: none;
+  text-align: center;
 }
 
 button {
+  font-size: 1.2em;
   font-weight: 600;
   padding: 18px 30px;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  border-radius: 25px;
+  border: solid gray 1px;
+  box-shadow: 0 0 2px 0 gray;
+  background-color: white;
   cursor: pointer;
 }
 
 @keyframes colorback {
   0% {
-    background-color: rgb(221, 138, 83);
+    background-color: rgba(176, 196, 222, 0.9);
   }
   50% {
-    background-color: rgb(151, 98, 161);
+    background-color: rgba(	209, 204, 182, 0.9);
   }
   100% {
-    background-color: rgb(76, 168, 180);
+    background-color: rgba(216, 191, 216, 0.9);
   }
 }
 
 button:hover {
   animation-name: colorback;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
 
 /* Output */
@@ -120,29 +116,20 @@ button:hover {
   justify-content: center;
   align-items: flex-end;
   text-align: center;
-  padding-bottom: 10px;
   background-color: transparent;
 
   animation-name: colorback;
-  animation-duration: 10s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
 
 #result {
   font-size: 1.4em;
-  font-weight: 600;
+  font-weight: 500;
   padding: 30px 0;
   background: transparent;
   z-index: 1;
-}
-
-img {
-  width: 90%;
-  max-width: 600px;
-  margin: -90px 0 -40px;
-  background: transparent;
-  z-index: 0;
 }
 
 footer div {
@@ -153,11 +140,11 @@ footer div {
   justify-content: center;
   font-size: 0.9em;
   text-align: center;
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -169,14 +156,14 @@ a {
     color: rgb(151, 98, 161);
   }
   100% {
-    color: rgb(76, 168, 180);
+    color: rgb(0, 100, 180);
   }
 }
 
 .info:hover {
   cursor: pointer;
   animation-name: colorize;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
@@ -189,11 +176,10 @@ a {
 }
 
 #popup {
-  background-color: rgba(143, 143, 143);
+  background-color: rgb(143, 143, 143);
   color: white;
   width: 210px;
   text-align: center;
-  border-radius: 6px;
   padding: 8px 0;
   position: absolute;
   z-index: 1;
@@ -212,9 +198,6 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
-  header {
-    padding: 10px 0 25px;
-  }
 
   .row1 {
     flex-direction: column;
@@ -224,9 +207,7 @@ a {
   .col1 {
     width: 100%;
     max-width: 500px;
-    border-bottom: solid white 1px;
-    border-top: solid white 1px;
-    padding: 20px 0;
+    margin: 20px 0;
   }
 
   .col2 {
@@ -241,4 +222,5 @@ a {
   footer div {
     flex-direction: column;
   }
+ 
 }
