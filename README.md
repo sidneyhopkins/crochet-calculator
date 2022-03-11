@@ -16,11 +16,9 @@ Determining the correct number of initial stitches for crochet patterns is known
 
 ## How to use
 
-You can view the calculator and code on CodePen.
+#### [View the site on codepen.](https://codepen.io/sidneyhopkins/pen/Rwjoery)
 
-https://codepen.io/sidneyhopkins/pen/Rwjoery
-
-You can also clone the project to your desktop and use a live-server (i.e. VSCode extension Live Server).
+You can also clone the project to your desktop and use a live-server (e.g. VSCode extension Live Server).
 
 ## License
 
