@@ -148,6 +148,8 @@ footer div {
   justify-content: center;
   font-size: 0.9em;
   text-align: center;
+  margin: 20px auto;
+
 }
 
 footer a {
